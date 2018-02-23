@@ -10,12 +10,6 @@ $grey: #ECECEC;
 
 $font-size: 1.2em;
 
-header{
-    position:fixed;
-    top:0;
-    z-index:100;
-}
-
 .top-nav{
     display:grid;
     grid-template-columns: $side-margin 20vw 1fr $side-margin;
