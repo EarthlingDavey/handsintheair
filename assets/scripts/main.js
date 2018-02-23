@@ -19,6 +19,13 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        document.addEventListener('wpcf7mailsent', function (event) {
+          if ($('section.contact-form').length > 0) {
+            location = '/';
+          }
+        }, false);
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

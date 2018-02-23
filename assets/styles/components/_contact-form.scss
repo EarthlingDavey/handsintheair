@@ -17,6 +17,7 @@
   label {
     cursor: pointer;
     width: 100%; 
+    font-weight: 700;
   }
 
   &__fields {
@@ -32,6 +33,7 @@
       text-align: center;
       .btn {
         min-width: 90px;
+        margin-bottom: 12px;
       }
     }
   }
