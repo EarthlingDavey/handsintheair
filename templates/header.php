@@ -1,6 +1,6 @@
 <header class="">
   
-  <mobile-navigation>
+  <div id="mobile-navigation">
     <div class="hamburger">menu</div>
     <div class="mobile-links">
       <?php
@@ -19,8 +19,8 @@
         endif;
       ?>
     </div>
-  </mobile-navigation>
-  <main-navigation>
+  </div>
+  <div id="main-navigation">
     <div class="container">
       <div class="row top-nav">
         <div class="site-logo-container">
@@ -44,10 +44,10 @@
       if (has_nav_menu('primary_navigation_right_side')){
         echo "<div class=\"container-fluid double-back\">";
       }else{
-        echo "<div class=\"container-fluid\">";
+        echo "<div class=\"container-fluid single-back\">";
       }
     ?>
-    <div class="container-fluid double-back">
+    <div class="container-fluid">
       <div class="container">
         <div class="row bottom-nav">
           <div class="bottom-nav-links-left">
@@ -67,6 +67,6 @@
         </div>
       </div>
     </div>
-  </main-navigation>
+  </div>
 
 </header>

@@ -18,6 +18,10 @@ $font-size: 1.2em;
     background: linear-gradient(to right, $grey 0%, $grey 50%, $secondary 51%, $secondary 100%);
 }
 
+.single-back{
+    background-color: $grey;
+}
+
 .site-logo{
     height: $top-nav-height;
     padding: $nav-padding-top 0;
@@ -103,9 +107,8 @@ $font-size: 1.2em;
 }
 
 @media only screen and (max-width: 812px) {
-    main-navigation{
-        display:none;
-    }
+    #main-navigation{ display:none; }
+    #mobile-navigation{ display:block; }
 
     $nav-padding-top: 10px;
     $nav-padding-bottom: 10px;
@@ -154,9 +157,8 @@ $font-size: 1.2em;
 */
 //@media only screen and (min-width: 1025px) {    
 @media only screen and (min-width: 768px) {
-    mobile-navigation{
-        display:none;
-    }
+    #main-navigation{ display:block; }
+    #mobile-navigation{ display:none; }
 
     .top-nav{
         display:grid;
