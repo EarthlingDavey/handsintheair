@@ -29,7 +29,8 @@ function setup() {
   register_nav_menus([
     'top_navigation' => __('Top Navigation', 'sage'),
     'primary_navigation' => __('Primary Navigation', 'sage'),
-    'primary_navigation_right_side' => __('Navigation Right', 'sage')
+    'primary_navigation_right_side' => __('Navigation Right', 'sage'),
+    'footer_navigation' => __('Footer Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
