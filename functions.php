@@ -15,7 +15,8 @@ $sage_includes = [
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
-  'lib/customizer.php' // Theme customizer
+  'lib/customizer.php', // Theme customizer
+  'lib/image-sizes.php'// Custom images sizes
 ];
 
 foreach ($sage_includes as $file) {
@@ -26,3 +27,12 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+// Used for copyright notice in footer
+function auto_copyright($year = 'auto'){ 
+   if(intval($year) == 'auto'){ $year = date('Y'); } 
+   if(intval($year) == date('Y')){ echo intval($year); } 
+   if(intval($year) < date('Y')){ echo intval($year) . ' - ' . date('Y'); }
+   if(intval($year) > date('Y')){ echo date('Y'); }
+}
