@@ -11,7 +11,7 @@
         </nav>
       </div>
       <div class="col-sm-12 col-md-6">
-          <p class="text-right">&copy; Hands in the Air <?php echo auto_copyright(2018); ?></p>
+          <p>&copy; Hands in the Air <?php echo auto_copyright(2018); ?></p>
       </div>
     </div>
     
