@@ -28,7 +28,8 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'top_navigation' => __('Top Navigation', 'sage'),
-    'primary_navigation' => __('Primary Navigation', 'sage')
+    'primary_navigation' => __('Primary Navigation', 'sage'),
+    'primary_navigation_right_side' => __('Navigation Right', 'sage')
   ]);
 
   // Enable post thumbnails

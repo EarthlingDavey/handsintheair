@@ -16,13 +16,19 @@
     </div>
   </div>
   <div class="row bottom-nav">
-    <div class="bottom-nav-links">
-          <?php
-          if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-          endif;
-          ?>
-          </div>
-    
+    <div class="bottom-nav-links-left">
+      <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+        endif;
+      ?>
+    </div>
+    <div class="bottom-nav-links-right">
+      <?php
+        if (has_nav_menu('primary_navigation_right_side')) :
+          wp_nav_menu(['theme_location' => 'primary_navigation_right_side', 'menu_class' => 'nav']);
+        endif;
+      ?>
+    </div>
   </div>
 </header>
