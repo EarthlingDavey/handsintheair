@@ -1,6 +1,6 @@
 .site-footer {
 
-  padding: 20px 0;
+  padding: 20px 0 4px;
 
   background: rgb(106, 106, 106);
 
@@ -8,6 +8,7 @@
   ul {}
 
   li {
+    margin-bottom: 16px;
     &:not(:last-of-type) {
       margin-right: 12px;
       @include media-breakpoint-up(md) {
@@ -17,6 +18,12 @@
   }
 
   a,p {
-    color: $white;
+    color: $white; 
+  }
+
+  p {
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
   }
 }
