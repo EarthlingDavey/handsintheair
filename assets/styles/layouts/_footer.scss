@@ -1,0 +1,22 @@
+.site-footer {
+
+  padding: 20px 0;
+
+  background: rgb(106, 106, 106);
+
+
+  ul {}
+
+  li {
+    &:not(:last-of-type) {
+      margin-right: 12px;
+      @include media-breakpoint-up(md) {
+        margin-right: 38px;
+      }
+    }
+  }
+
+  a,p {
+    color: $white;
+  }
+}
