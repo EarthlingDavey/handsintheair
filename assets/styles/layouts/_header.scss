@@ -209,6 +209,8 @@ $font-size: 1.2em;
         grid-template-columns: $side-margin auto 1fr $side-margin;
         grid-template-rows: 1fr;
         height:$top-nav-height;
+
+        background-color:white;
     }
     
     .site-logo-container{

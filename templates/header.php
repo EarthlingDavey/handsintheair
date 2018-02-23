@@ -14,22 +14,24 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div id="mobile-links" class="mobile-links">
-        <?php
-          if (has_nav_menu('top_navigation')) :
-            wp_nav_menu(['theme_location' => 'top_navigation', 'menu_class' => 'nav']);
-          endif;
+      <div class="row">
+        <div id="mobile-links" class="mobile-links">
+          <?php
+            if (has_nav_menu('top_navigation')) :
+              wp_nav_menu(['theme_location' => 'top_navigation', 'menu_class' => 'nav']);
+            endif;
 
-          get_search_form();
-        
-          if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-          endif;
+            get_search_form();
+          
+            if (has_nav_menu('primary_navigation')) :
+              wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+            endif;
 
-          if (has_nav_menu('primary_navigation_right_side')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation_right_side', 'menu_class' => 'nav']);
-          endif;
-        ?>
+            if (has_nav_menu('primary_navigation_right_side')) :
+              wp_nav_menu(['theme_location' => 'primary_navigation_right_side', 'menu_class' => 'nav']);
+            endif;
+          ?>
+        </div>
       </div>
     </div>
   </div>
