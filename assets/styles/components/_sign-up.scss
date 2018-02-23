@@ -1,0 +1,35 @@
+.sign-up {
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__heading {
+    margin-bottom: 28px;
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"] {
+      width: 100%;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &__fields {
+    // display: flex;
+    // align-items: flex-end;
+
+    
+  }
+
+  &__field {
+    &--button {
+      margin-top: 22px;
+      text-align: center;
+
+    }
+  }
+}

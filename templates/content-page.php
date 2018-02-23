@@ -1,7 +1,9 @@
 <?php
 
   $module_array = [
-    'cta_section'
+    'content',
+    'cta_section',
+    'sign_up'
   ];
   
   $fields = get_fields();
