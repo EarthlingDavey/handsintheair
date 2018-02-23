@@ -10,9 +10,11 @@
             <img src="<?php bloginfo('template_directory');?>/assets/images/HITA-logo-main.png" class="site-logo">
           </a>
         </div>
-        <div class="hamburger">menu</div>
+        <div class="hamburger"><div class="btn" onclick="toggleNav();">menu</div></div>
       </div>
-      <div class="mobile-links">
+    </div>
+    <div class="container-fluid">
+      <div id="mobile-links" class="mobile-links">
         <?php
           if (has_nav_menu('top_navigation')) :
             wp_nav_menu(['theme_location' => 'top_navigation', 'menu_class' => 'nav']);
@@ -31,7 +33,7 @@
       </div>
     </div>
   </div>
-  
+
   <div id="main-navigation">
     <div class="container">
       <div class="row top-nav">
@@ -82,3 +84,9 @@
   </div>
 
 </header>
+
+<script>
+  function toggleNav(){
+    document.getElementById("mobile-links").style.display = "block";
+  }
+</script>

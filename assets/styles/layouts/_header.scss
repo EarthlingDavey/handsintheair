@@ -125,6 +125,8 @@ $font-size: 1.2em;
         grid-template-rows: 1fr;
         height:$top-nav-height;
 
+        background-color: white;
+
         width:100%;
 
         position:fixed;
@@ -150,10 +152,15 @@ $font-size: 1.2em;
         padding-right:1em;
     }
 
-    .mobile-links{
+    #mobile-links{
+        /*
         opacity: 0;
         transition: opacity 0.5s;
+        */
+        display:none;
+    }
 
+    .mobile-links{
         position:fixed;
         float:left;
         top: $top-nav-height;
