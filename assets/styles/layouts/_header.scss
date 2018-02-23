@@ -10,22 +10,17 @@ $grey: #ECECEC;
 
 $font-size: 1.2em;
 
-/*
 header{
-    position: fixed;
+    position:fixed;
     top:0;
+    z-index:100;
 }
-*/
 
 .top-nav{
     display:grid;
     grid-template-columns: $side-margin 20vw 1fr $side-margin;
     grid-template-rows: 1fr;
     height:$top-nav-height;
-
-    position:fixed;
-    top:0;
-    z-index:100;
 }
 
 .site-logo-container{
