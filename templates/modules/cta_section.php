@@ -1,9 +1,11 @@
+
+
 <section class="cta-section">
 
-  <h2 class="cta-section__heading"><?php the_field('cta_section_heading'); ?></h2>
+  <h2 class="cta-section__heading"><?php echo $this_module['heading']; ?></h2>
 
   <div class="cta-section__content wysiwyg">
-    <?php the_field('cta_section_content'); ?>
+    <?php echo $this_module['content']; ?>
   </div>
 
 </section>
