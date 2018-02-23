@@ -10,6 +10,11 @@ $grey: #ECECEC;
 
 $font-size: 1.2em;
 
+header{
+    position: fixed;
+    top:0;
+}
+
 .top-nav{
     display:grid;
     grid-template-columns: $side-margin 20vw 1fr $side-margin;
@@ -79,10 +84,19 @@ $font-size: 1.2em;
     margin-left: 1em;
 }
 
-.btn-nav{
-    background-color: $primary;
+.btn{
     font-family: $font-family-sans-serif;
     font-size: $font-size;
+}
+
+.btn a:hover{
+    text-decoration: none;
+    font-family: $font-family-sans-serif;
+    border-bottom: $primary solid 1px;
+}
+
+.btn-nav{
+    background-color: $primary;
 }
 
 .btn-nav a{
@@ -92,6 +106,38 @@ $font-size: 1.2em;
 .btn-hollow{
     background-color: transparent;
     border: $primary solid 2px;
+    padding-left:30px;
+    padding-right:30px;
+    
+}
+
+.btn-hollow:hover{
+    background-color: $primary;
+}
+
+.btn-hollow:hover > a{
+    color: white;
+}
+
+.btn-full{
+    background-color: $secondary;
+    position: relative;
+    margin-top:-20px;
+    margin-bottom: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-top: 25px;
+    padding-left:25px;
+    padding-right:25px;
+
+    border-radius: 0;
+
+    font-weight: bold;
+}
+
+.btn-full:hover > a{
+    border-bottom: 0;
+    color:white;
 }
 
 .search-form {
@@ -100,4 +146,8 @@ $font-size: 1.2em;
 
 .menu-item > a{
     color: $black;
+}
+
+.search-submit{
+    display:none !important;
 }
