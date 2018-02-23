@@ -1,6 +1,7 @@
 <?php
 
   $module_array = [
+    'contact_form',
     'content',
     'cta_section',
     'sign_up'
