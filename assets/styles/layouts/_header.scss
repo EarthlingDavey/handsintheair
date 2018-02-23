@@ -3,68 +3,24 @@
 $nav-padding-top: 20px;
 $nav-padding-bottom: 20px;
 $top-nav-height: ( $nav-padding-top + 90px + $nav-padding-bottom );
-$side-margin: 20px;
+$side-margin: 0;
 
 $black:#141414;
 $grey: #ECECEC;
 
 $font-size: 1.2em;
 
-.top-nav{
-    display:grid;
-    grid-template-columns: $side-margin 20vw 1fr $side-margin;
-    grid-template-rows: 1fr;
-    height:$top-nav-height;
-}
+.double-back{
+    background-color: $grey;
 
-.site-logo-container{
-    grid-column: 2/3;
-    grid-row: 1/2;
+    background: -moz-linear-gradient(left, $grey 0%, $grey 50%, $secondary 51%, $secondary 100%);
+    background: -webkit-linear-gradient(left, $grey 0%, $grey 50%, $secondary 51%, $secondary 100%);
+    background: linear-gradient(to right, $grey 0%, $grey 50%, $secondary 51%, $secondary 100%);
 }
 
 .site-logo{
     height: $top-nav-height;
     padding: $nav-padding-top 0;
-}
-
-.top-nav-links{
-    grid-column: 3/4;
-    grid-row: 1/2;
-
-    display:flex;
-    align-items:center;
-    justify-content: flex-end;
-}
-
-.bottom-nav{
-    display:grid;
-    grid-template-columns: $side-margin 1fr 1fr $side-margin;
-    grid-template-rows: 1fr;
-
-    background-color: $grey;
-    color: $black;
-}
-
-.bottom-nav-links-left{
-    grid-row: 1/2;
-    grid-column: 2/3;
-    
-    padding: $nav-padding-bottom 0;
-
-    display:flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.bottom-nav-links-right{
-    grid-row: 1/2;
-    grid-column: 3/4;
-    
-    padding: $nav-padding-bottom 0;
-
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
 }
 
 .bottom-nav-links > btn{
@@ -119,11 +75,10 @@ $font-size: 1.2em;
     position: relative;
     margin-top:-20px;
     margin-bottom: -20px;
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-left:1em;
     padding-top: 25px;
     padding-left:25px;
-    padding-right:25px;
+    padding-right:0 !important;
 
     border-radius: 0;
 
@@ -145,4 +100,113 @@ $font-size: 1.2em;
 
 .search-submit{
     display:none !important;
+}
+
+@media only screen and (max-width: 812px) {
+    main-navigation{
+        display:none;
+    }
+
+    $nav-padding-top: 10px;
+    $nav-padding-bottom: 10px;
+    $top-nav-height: ( $nav-padding-top + 50px + $nav-padding-bottom );
+
+    .top-nav{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        height:$top-nav-height;
+    }
+    
+    .site-logo-container{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .hamburger{
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .mobile-links{
+        opacity: 1;
+        transition: opacity 0.5s;
+
+        z-index: 100;
+
+        background-color: $grey;
+
+        width:100%;
+    }
+
+    .top-nav-links, .bottom-nav, .bottom-nav-links-left, .bottom-nav-links-right{
+        display: none;
+    }
+}
+/*
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+*/
+//@media only screen and (min-width: 1025px) {    
+@media only screen and (min-width: 768px) {
+    mobile-navigation{
+        display:none;
+    }
+
+    .top-nav{
+        display:grid;
+        grid-template-columns: $side-margin auto 1fr $side-margin;
+        grid-template-rows: 1fr;
+        height:$top-nav-height;
+    }
+    
+    .site-logo-container{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .top-nav-links{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    
+        display:flex;
+        align-items:center;
+        justify-content: flex-end;
+    }
+
+    .bottom-nav{
+        display:grid;
+        grid-template-columns: $side-margin 1fr 1fr $side-margin;
+        grid-template-rows: 1fr;
+    
+        background-color: $grey;
+        color: $black;
+    }
+
+    .bottom-nav-links-left{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        
+        padding: $nav-padding-bottom 0;
+    
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .bottom-nav-links-right{
+        grid-row: 1/2;
+        grid-column: 3/4;
+        
+        padding: $nav-padding-bottom 0;
+    
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
