@@ -22,7 +22,9 @@
 
         document.addEventListener('wpcf7mailsent', function (event) {
           if ($('section.contact-form').length > 0) {
-            location = '/';
+            setTimeout(function () { 
+              location = siteObject.home;
+            }, 3000);
           }
         }, false);
 
