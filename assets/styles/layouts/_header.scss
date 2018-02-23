@@ -1,0 +1,66 @@
+$nav-padding-top: 10px;
+$nav-padding-bottom: 10px;
+$top-nav-height: ( 50px + $nav-padding + $nav-padding );
+$side-margin: 10px;
+
+.top-nav{
+    display:grid;
+    grid-template-columns: $side-margin 20vw 1fr $side-margin;
+    grid-template-rows: 1fr;
+    height:$top-nav-height;
+    background-color: green;
+}
+
+.site-logo-container{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.site-logo{
+    height: $top-nav-height;
+    padding: $nav-padding-top 0;
+}
+
+.top-nav-links{
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.bottom-nav{
+    background-color:lightgreen;
+
+    display:grid;
+    grid-template-columns: $side-margin 1fr $side-margin;
+    grid-template-rows: 1fr;
+}
+
+.bottom-nav-links{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    
+    padding: $nav-padding-bottom 0;
+
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bottom-nav-links > btn{
+    padding:1em;
+}
+
+.menu-item{
+    margin-left: 1em;
+}
+
+.btn-nav{
+    background-color:red;
+}
+
+#search {
+    display: none;
+}

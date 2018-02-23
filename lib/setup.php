@@ -27,8 +27,8 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage'),
-    'footer_navigation' => __('Footer Navigation', 'sage'),
+    'top_navigation' => __('Top Navigation', 'sage'),
+    'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -58,6 +58,15 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Primary', 'sage'),
     'id'            => 'sidebar-primary',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Menu Buttons', 'sage'),
+    'id'            => 'sidebar-menu-buttons',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
